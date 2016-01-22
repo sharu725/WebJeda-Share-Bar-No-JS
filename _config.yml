@@ -2,8 +2,8 @@
 title: Good Clean Read
 tag_text: Good Clean Read
 description: A responsive template for publishing single-page websites, articles that are easy on the eyes
-url: "http://sharu725.github.io"
-baseurl: /WebJeda-Share-Bar-No-JS/
+url: "http://sharu725.github.io/WebJeda-Share-Bar-No-JS/"
+baseurl: /
 
 # Build settings
 markdown: kramdown
