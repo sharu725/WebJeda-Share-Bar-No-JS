@@ -9,3 +9,6 @@ baseurl: /webjeda-sharebar
 markdown: kramdown
 
 exclude: ["README.md"]
+
+# Tracker
+analytics: UA-83979019-1
