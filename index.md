@@ -1,54 +1,239 @@
 ---
 layout: default
 ---
+<link rel="stylesheet" href="{{site.baseurl}}/css/share.css"> 
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-## A Jekyll template for publishing single-page websites and articles that are incredibly readable and fully responsive
+<div class="share-box"> 
+<p>Share this:</p>
 
-### Nice, clean, reading!
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-facebook-official fa"> facebook</i></a>
+        <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter fa"> twitter</i></a>
+        <a href="https://plus.google.com/share?url={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-google-plus fa"> google</i></a>
+        <a href="http://www.reddit.com/submit?url={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-reddit fa"> reddit</i></a>                           <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{site.baseurl}}{{ page.url }}&title={{ page.title }}&summary={{ page.desc }}&source=webjeda" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-linkedin fa"> linkedin</i></a>                         <a href="mailto:?subject={{ page.title }}&amp;body=Check out this site {{ site.url }}{{site.baseurl}}{{ page.url }}"><i class="fa fa-envelope fa"> email</i></a>                          
+</div>
 
-Good clean read is set up with readability first in mind. Whatever you want to communicate here can be read easily, and without distraction. Of course, it's fully responsive, which means people can read it naturally on any phone, or tablet. Write it in markdown in <code>index.md</code> and get a beautifully published piece.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## How do they get the URL of current page?
+The links are built using liquid code. They look for current page URL and insert into the share link. So doesn't matter where you place them, they work!
 
-> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+## Code
 
-### With footnotes too!
+{% highlight html %}
+/* Call Fontawesome in the head section or in the location where you place the share bar */
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-Back up your stuff with solid, clean citations. Footnotes can be written in markdown and appear like this.[^1] Use as many as you like.[^2]
+<div class="share-box"> 
+    <p>Share this:</p>
+    /* Facebook button */
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+    'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-facebook-official fa"> facebook</i></a>
+     
+    /* Twitter button */             
+    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+    'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter fa"> twitter</i></a>
+     
+    /* Google button */       
+    <a href="https://plus.google.com/share?url={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+    'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-google-plus fa"> google</i></a>
+    
+    /* Reddit button */        
+    <a href="http://www.reddit.com/submit?url={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+    'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-reddit fa"> reddit</i></a>    
+    
+    /* LinkedIn button */
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{site.baseurl}}{{ page.url }}&title={{ page.title }}&summary={{ page.desc }}&source=webjeda" onclick="window.open(this.href, 'mywin',
+    'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-linkedin fa"> linkedin</i></a>
+    
+    /* eMail button */                         
+    <a href="mailto:?subject={{ page.title }}&amp;body=Check out this site {{ site.url }}{{site.baseurl}}{{ page.url }}"><i class="fa fa-envelope fa"> email</i></a>  
+                            
+</div>
+{% endhighlight %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+## Style
+Use a style that suits your needs. Here is what I have used.
 
-### Add social sharing buttons
+{% highlight css %}
+.share-box p {
+    margin: 0;
+}
 
-Simply add the following line anywhere in you markdown:
+.share-box .fa {
+    box-shadow: 0 0 1px #777;
+    padding: 5px 12px;  
+}
+.share-box .fa:hover {
+    box-shadow: 0 0 4px #777;
+}
 
-<pre><code>{% raw  %}
-{% include sharing.html %}
-{% endraw %}
-</code></pre>
 
-and get a nice responsive sharing ribbon.
+.share-box .fa-facebook-official {
+    color: #3b5998;
+}
+.share-box .fa-facebook-official:hover {
+    background-color: #3b5998;
+    color:white;
+}
 
-{% include sharing.html %}
+.share-box .fa-google-plus {
+    color: #d34836;
+}
+.share-box .fa-google-plus:hover {
+    background-color: #d34836;
+    color: white;
+}
 
-Add this at the bottom, or the top, or between every other paragraph is you're desprate for social validation.
+.share-box .fa-linkedin {
+    color: #0077b5;
+}
+.share-box .fa-linkedin:hover {
+    background-color: #0077b5;
+    color: white;
+}
 
-Just remember to customize the buttons to fit your url in the <code>_includes/sharing.html</code> file. These buttons are made available and customizable by the good folks at kni-labs. See the documentation at [https://github.com/kni-labs/rrssb](https://github.com/kni-labs/rrssb) for more information.
+.share-box .fa-envelop {
+    color: #444444;
+}
+.share-box .fa-envelope:hover {
+    background-color: #444444;
+    color: white;
+}
 
-### Add images to make your point
 
-Images play nicely with this as well. Add diagrams or charts to make your point, and the template will fit them in appropriately.
+.share-box .fa-reddit {
+    color: #ff5700;
+}
+.share-box .fa-reddit:hover {
+    background-color: #ff5700;
+    color: white;
+}
 
-<img src="/images/hello.svg" alt="hello">
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+.share-box .fa-twitter {
+    color: #4099FF;
+}
+.share-box .fa-twitter:hover {
+    background-color: #4099FF;
+    color: white;
+}
 
-Thanks to [Shu Uesengi](https://github.com/chibicode) for inspiring and providing the base for this template with his excellent work, [solo](https://github.com/chibicode).
+{% endhighlight %}
 
-<hr>
 
-##### Footnotes:
+## A complete html file 
 
-[^1]: This is a footnote. Click to return.
+{% highlight html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webjeda Sharebar</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    
+ <div class="share-box"> 
+    <p>Share this:</p>
+    /* Facebook button */
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+    'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-facebook-official fa"> facebook</i></a>
+     
+    /* Twitter button */             
+    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+    'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter fa"> twitter</i></a>
+     
+    /* Google button */       
+    <a href="https://plus.google.com/share?url={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+    'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-google-plus fa"> google</i></a>
+    
+    /* Reddit button */        
+    <a href="http://www.reddit.com/submit?url={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+    'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-reddit fa"> reddit</i></a>    
+    
+    /* LinkedIn button */
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{site.baseurl}}{{ page.url }}&title={{ page.title }}&summary={{ page.desc }}&source=webjeda" onclick="window.open(this.href, 'mywin',
+    'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-linkedin fa"> linkedin</i></a>
+    
+    /* eMail button */                         
+    <a href="mailto:?subject={{ page.title }}&amp;body=Check out this site {{ site.url }}{{site.baseurl}}{{ page.url }}"><i class="fa fa-envelope fa"> email</i></a>  
+                            
+</div>   
+ 
+    
+<style>
 
-[^2]: Here is another.
+.share-box p {
+    margin: 0;
+}
+
+.share-box .fa {
+    box-shadow: 0 0 1px #777;
+    padding: 5px 12px;  
+}
+.share-box .fa:hover {
+    box-shadow: 0 0 4px #777;
+}
+
+
+.share-box .fa-facebook-official {
+    color: #3b5998;
+}
+.share-box .fa-facebook-official:hover {
+    background-color: #3b5998;
+    color:white;
+}
+
+.share-box .fa-google-plus {
+    color: #d34836;
+}
+.share-box .fa-google-plus:hover {
+    background-color: #d34836;
+    color: white;
+}
+
+.share-box .fa-linkedin {
+    color: #0077b5;
+}
+.share-box .fa-linkedin:hover {
+    background-color: #0077b5;
+    color: white;
+}
+
+.share-box .fa-envelop {
+    color: #444444;
+}
+.share-box .fa-envelope:hover {
+    background-color: #444444;
+    color: white;
+}
+
+
+.share-box .fa-reddit {
+    color: #ff5700;
+}
+.share-box .fa-reddit:hover {
+    background-color: #ff5700;
+    color: white;
+}
+
+
+.share-box .fa-twitter {
+    color: #4099FF;
+}
+
+.share-box .fa-twitter:hover {
+    background-color: #4099FF;
+    color: white;
+}
+
+</style>   
+    
+</body>
+</html>
+{% endhighlight %}

@@ -1,9 +1,9 @@
 # Site settings
-title: Good Clean Read
-tag_text: Good Clean Read
-description: A responsive template for publishing single-page websites, articles that are easy on the eyes
-url: "http://sharu725.github.io/WebJeda-Share-Bar-No-JS/"
-baseurl: /
+title: Webjeda Sharebar Demo
+tag_text: Webjeda Sharebar Demo
+description: A responsive, fast loading, only css share bar for Jekyll websites and blogs.
+url: "http://webjeda.com"
+baseurl: /webjeda-sharebar
 
 # Build settings
 markdown: kramdown
