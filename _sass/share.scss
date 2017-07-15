@@ -3,10 +3,12 @@
 }
 
 .share-box .fa {
+    -webkit-box-shadow: 0 0 1px #777;
     box-shadow: 0 0 1px #777;
     padding: 5px 12px;  
 }
 .share-box .fa:hover {
+    -webkit-box-shadow: 0 0 4px #777;
     box-shadow: 0 0 4px #777;
 }
 

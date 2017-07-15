@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" href="{{site.baseurl}}/css/share.css"> 
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
 
 <div class="share-box"> 
 <p>Share this:</p>
@@ -65,10 +65,12 @@ Use a style that suits your needs. Here is what I have used.
 }
 
 .share-box .fa {
+    -webkit-box-shadow: 0 0 1px #777;
     box-shadow: 0 0 1px #777;
     padding: 5px 12px;  
 }
 .share-box .fa:hover {
+    -webkit-box-shadow: 0 0 4px #777;
     box-shadow: 0 0 4px #777;
 }
 
@@ -122,6 +124,8 @@ Use a style that suits your needs. Here is what I have used.
     background-color: #4099FF;
     color: white;
 }
+
+
 
 {% endhighlight %}
 
@@ -173,10 +177,12 @@ Use a style that suits your needs. Here is what I have used.
 }
 
 .share-box .fa {
+    -webkit-box-shadow: 0 0 1px #777;
     box-shadow: 0 0 1px #777;
     padding: 5px 12px;  
 }
 .share-box .fa:hover {
+    -webkit-box-shadow: 0 0 4px #777;
     box-shadow: 0 0 4px #777;
 }
 
@@ -226,14 +232,20 @@ Use a style that suits your needs. Here is what I have used.
 .share-box .fa-twitter {
     color: #4099FF;
 }
-
 .share-box .fa-twitter:hover {
     background-color: #4099FF;
     color: white;
 }
+
+
 
 </style>   
     
 </body>
 </html>
 {% endhighlight %}
+
+
+[Read the article](https://blog.webjeda.com/share-buttons-jekyll/)
+
+[Fork](https://github.com/sharu725/webjeda-sharebar)
