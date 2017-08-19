@@ -1,6 +1,6 @@
 # Site settings
 title: Webjeda Sharebar Demo
-tag_text: Webjeda Sharebar Demo
+tag_text: Sharebar Demo
 description: A responsive, fast loading, only css share bar for Jekyll websites and blogs.
 url: "http://webjeda.com"
 baseurl: /webjeda-sharebar
