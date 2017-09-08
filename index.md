@@ -32,6 +32,7 @@ The links are built using liquid code. They look for current page URL and insert
 ## Code
 
 {% highlight html %}
+{% raw %}
 /* Call Fontawesome in the head section or in the location where you place the share bar */
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -55,7 +56,7 @@ The links are built using liquid code. They look for current page URL and insert
 
 <a class="e" href="mailto:?subject={{ page.title }}&amp;body=Check out this site {{ site.url }}{{site.baseurl}}{{ page.url }}"><i class="fa fa-envelope fa"></i><span> email</span></a>                          
 </div>
-
+{% endraw %}
 {% endhighlight %}
 
 ## Style
@@ -119,6 +120,7 @@ Use a style that suits your needs. Here is what I have used.
 ## A complete html file 
 
 {% highlight html %}
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -204,6 +206,7 @@ Use a style that suits your needs. Here is what I have used.
 </style>   
 </body>
 </html>
+{% endraw %}
 {% endhighlight %}
 
 
