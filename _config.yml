@@ -10,8 +10,8 @@ markdown: kramdown
 
 exclude: ["README.md"]
 
-sass: 
-  style: compressed
+#sass: 
+#  style: compressed
 
 #compress.html
 compress_html:
@@ -29,5 +29,5 @@ compress_html:
 # Tracker
 analytics: UA-83979019-1
 
-gems:
+plugins:
     - jekyll-seo-tag
